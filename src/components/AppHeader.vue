@@ -30,7 +30,7 @@ h1 {
         border-radius: 10px;
         margin-inline: 10px;
 
-    };
+    }
     #reset{
         background-color: orange;
     }
