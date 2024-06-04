@@ -20,7 +20,7 @@ export default{
 
   created() {
     axios.get(store.apiUrl).then((response) => {
-      store.result = response.data.results;
+      store.results = response.data.results;
     });
   },
 };

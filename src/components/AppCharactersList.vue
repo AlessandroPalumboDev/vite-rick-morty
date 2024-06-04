@@ -1,51 +1,37 @@
 <script>
 import ChararterCard from './AppCharacterCard.vue';
+import {store} from '../store.js';
 
 export default {
     name: 'AppCharactersList',
 
     components:{
         ChararterCard,
-    }
+    },
+
+    data() {
+        return {
+            store,
+        }
+    },
 }
 </script>
 
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-25">
-                <ChararterCard />
-            </div>
-            <div class="col-100">
-                <h5>N elementi trovati</h5>
-            </div>
-        </div>
+    <ChararterCard />
+    <div class="col-100">
+        <h5>Found {{ store.results.length }} characters</h5>
     </div>
 </template>
 
 <style scoped lang="scss">
-    .container{
-        margin: 0 auto;
-        max-width: 900px;
+    .col-100{
+        width: 100%;
 
-        .row{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-
-            .col-25{
-                width: calc(100% / 4);
-
-            }
-            .col-100{
-                width: 100%;
-
-                h5{
-                    font-weight: 800;
-                    text-align: center;
-                    margin-top: 20px;
-                }
-            }
+        h5{
+            font-weight: 800;
+            text-align: center;
+            margin: 20px 0;
         }
     }
 </style>
