@@ -35,7 +35,7 @@ h1 {
         background-color: orange;
     }
     #search{
-        background-color: blue;
+        background-color: rgb(1, 106, 243);
         color: white;
     }
 

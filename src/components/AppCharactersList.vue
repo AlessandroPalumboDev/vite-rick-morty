@@ -11,9 +11,28 @@ export default {
 </script>
 
 <template>
-<ChararterCard />
+    <div class="container">
+        <div class="row">
+            <div class="col-25">
+                <ChararterCard />
+            </div>
+        </div>
+    </div>
 </template>
 
-<style>
+<style scoped lang="scss">
+    .container{
+        margin: 0 auto;
+        max-width: 900px;
 
+        .row{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+
+            .col-25{
+                width: calc(100% / 4);
+            }
+        }
+    }
 </style>
