@@ -1,6 +1,8 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
+import Loader from './components/AppMainLoader.vue';
+
 import axios from 'axios';
 import {store} from './store';
 export default{
@@ -9,6 +11,7 @@ export default{
   components: {
     AppHeader,
     AppMain,
+    Loader,
     // AppFooter
   },
 
@@ -33,7 +36,8 @@ export default{
   </header>
 
   <main>
-    <AppMain />
+    <Loader v-if="store.loading"/>
+    <AppMain v-else/>
   </main>
   
 </template>

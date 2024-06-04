@@ -18,18 +18,18 @@ export default {
 </script>
 
 <template>
-    <CharacterCard />
-    <div class="col-100">
-        <h5>Found {{ store.results.length }} characters of {{ store.info.count }}</h5>
-    </div>
-    <div class="col-100">
-        <a :href="store.info.prev">
-            <botton>< PREV</botton>
-        </a>
-        <a :href="store.info.next">
-            <botton>NEXT ></botton>
-        </a>
-    </div>
+        <CharacterCard />
+        <div class="col-100">
+            <h5>Found {{ store.results.length }} characters of {{ store.info.count }}</h5>
+        </div>
+        <div class="col-100">
+            <a :href="store.info.prev">
+                <button>< PREV</button>
+            </a>
+            <a :href="store.info.next">
+                <button>NEXT ></button>
+            </a>
+        </div>
 </template>
 
 <style scoped lang="scss">
@@ -40,7 +40,7 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
 
 
         h5{
@@ -48,11 +48,11 @@ export default {
             margin: 10px auto;
         }
 
-        botton{
+        button{
             padding: 10px;
             border: 1px solid lightgray;
             border-radius: 10px;
-            margin-inline: 10px;
+            margin-inline: 50px;
             background-color: rgb(0, 255, 64);
             color: black;
             &:hover{
