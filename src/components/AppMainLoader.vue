@@ -4,6 +4,11 @@ export default {
 }
 </script>
 <template>
-<h2>caricamento in corso</h2>
+<h2>caricamento in corso...</h2>
 </template>
+<style>
+h2{
+    margin: auto;
+}
+</style>
 

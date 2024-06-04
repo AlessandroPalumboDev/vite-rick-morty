@@ -21,11 +21,19 @@ export default{
     };
   },
 
+  methods:{
+    searchCharacter(){
+      store.loading = true;
+    }
+  },
+
   created() {
     axios.get(store.apiUrl).then((response) => {
       store.results = response.data.results;
       store.info = response.data.info;
+      store.loading = false;
     });
+    this.searchCharacter();
   },
 };
 </script>
