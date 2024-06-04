@@ -18,22 +18,28 @@ export default {
 </script>
 
 <template>
-        <CharacterCard />
-        <div class="col-100">
-            <h5>Found {{ store.results.length }} characters of {{ store.info.count }}</h5>
-        </div>
-        <div class="col-100">
-            <a :href="store.info.prev">
-                <button>< PREV</button>
-            </a>
-            <a :href="store.info.next">
-                <button>NEXT ></button>
-            </a>
-        </div>
+<div class="container">
+    <CharacterCard />
+    <div class="col-100">
+        <h5>Found {{ store.results.length }} characters of {{ store.info.count }}</h5>
+    </div>
+    <div class="col-100 absolute">
+        <a :href="store.info.prev">
+            <button>< PREV</button>
+        </a>
+        <a :href="store.info.next">
+            <button>NEXT ></button>
+        </a>
+    </div>
+</div>
 </template>
 
 <style scoped lang="scss">
 @use '../assets/scss/partials/variables';
+
+.container{
+    position: relative;
+}
 
     .col-100{
         width: 100%;
@@ -49,19 +55,28 @@ export default {
         }
 
         button{
-            padding: 10px;
+            font-weight: 600;
+            padding: 30px 14px;
             border: 1px solid lightgray;
-            border-radius: 10px;
-            margin-inline: 50px;
+            border-radius: 50%;
+            margin-inline: 20px;
             background-color: rgb(0, 255, 64);
+            box-shadow:variables.$ombra-card;
             color: black;
+
             &:hover{
-                background-color: rgb(2, 148, 38);
-                box-shadow:variables.$ombra-bottone;
+                background-color: rgb(0, 148, 37);
                 cursor: pointer;
                 color: white;
-                
+                box-shadow: inset 0px 0px 28px -4px #FFFFFF,0px 0px 30px 4px #000000;
             }
         }
+    }
+
+    .absolute{
+        position: absolute;
+        top: 50vh;
+        z-index: 1;
+        
     }
 </style>

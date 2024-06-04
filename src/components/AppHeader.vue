@@ -35,7 +35,7 @@ h1 {
     #reset{
         background-color: orange;
             &:hover{
-                background-color: rgb(179, 117, 1);
+                background-color: rgb(212, 138, 0);
                 box-shadow:variables.$ombra-bottone;
                 color: white;
                 cursor: pointer;
