@@ -30,7 +30,7 @@ export default {
 
 </template>
 
-<style>
+<style scoped lang="scss">
 
 .container{
     margin: 0 auto;
@@ -57,8 +57,6 @@ export default {
                 .info{
                     margin: 20px 0;
                 }
-
-  
 
             }
         }
