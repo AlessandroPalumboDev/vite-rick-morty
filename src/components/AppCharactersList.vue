@@ -45,8 +45,7 @@ export default {
 
         h5{
             font-weight: 800;
-            margin: 10px 0;
-
+            margin: 10px auto;
         }
 
         botton{
