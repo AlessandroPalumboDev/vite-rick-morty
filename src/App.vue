@@ -36,4 +36,8 @@ export default{
   </main>
   
 </template>
-<!-- <style></style> -->
+<style scoped lang="scss">
+header{
+  margin-bottom: 25px;
+}
+</style>

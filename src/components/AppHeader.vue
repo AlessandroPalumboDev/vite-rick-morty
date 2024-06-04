@@ -16,6 +16,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use '../assets/scss/partials/variables';
 h1 {
   text-align: center;
   font-weight: 900;
@@ -33,10 +34,23 @@ h1 {
     }
     #reset{
         background-color: orange;
+            &:hover{
+                background-color: rgb(179, 117, 1);
+                box-shadow:variables.$ombra-bottone;
+                color: white;
+                cursor: pointer;
+                
+            }
     }
     #search{
         background-color: rgb(1, 106, 243);
         color: white;
+
+        &:hover{
+            background-color: rgb(2, 73, 165);
+            box-shadow:variables.$ombra-bottone;
+            cursor: pointer;
+        }
     }
 
 }

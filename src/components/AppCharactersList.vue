@@ -1,12 +1,12 @@
 <script>
-import ChararterCard from './AppCharacterCard.vue';
+import CharacterCard from './AppCharacterCard.vue';
 import {store} from '../store.js';
 
 export default {
     name: 'AppCharactersList',
 
     components:{
-        ChararterCard,
+        CharacterCard,
     },
 
     data() {
@@ -18,9 +18,9 @@ export default {
 </script>
 
 <template>
-    <ChararterCard />
+    <CharacterCard />
     <div class="col-100">
-        <h5>Found {{ store.results.length }} characters</h5>
+        <h5>Found {{ store.results.length }} characters </h5>
     </div>
 </template>
 
