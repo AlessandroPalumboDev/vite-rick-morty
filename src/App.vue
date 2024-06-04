@@ -21,6 +21,7 @@ export default{
   created() {
     axios.get(store.apiUrl).then((response) => {
       store.results = response.data.results;
+      store.info = response.data.info;
     });
   },
 };
