@@ -23,15 +23,13 @@ export default {
     <div class="col-100">
         <h5>Found {{ store.results.length }} characters of {{ store.info.count }}</h5>
     </div>
-    <div class="col-100 absolute">
-        <a :href="store.info.prev">
+        <a id="prev" :href="store.info.prev">
             <button>< PREV</button>
         </a>
-        <a :href="store.info.next">
+        <a id="next" :href="store.info.next">
             <button>NEXT ></button>
         </a>
     </div>
-</div>
 </template>
 
 <style scoped lang="scss">
@@ -47,6 +45,7 @@ export default {
         justify-content: space-between;
         align-items: center;
         margin-bottom: 40px;
+        position: relative;
 
 
         h5{
@@ -54,7 +53,10 @@ export default {
             margin: 10px auto;
         }
 
-        button{
+
+    }
+
+    button{
             font-weight: 600;
             padding: 30px 14px;
             border: 1px solid lightgray;
@@ -71,12 +73,14 @@ export default {
                 box-shadow: inset 0px 0px 28px -4px #FFFFFF,0px 0px 30px 4px #000000;
             }
         }
+
+    #prev, #next{
+        position: absolute;
+        top: calc(50% - 100px);
+        z-index: 0;
     }
 
-    .absolute{
-        position: absolute;
-        top: 50vh;
-        z-index: 1;
-        
+    #next{
+        right: 0 ;
     }
 </style>
