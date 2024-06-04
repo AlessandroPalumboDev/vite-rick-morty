@@ -12,5 +12,4 @@ export default {
 </script>
 
 <template>
-<p>{{ store.prova }}</p>
 </template>
