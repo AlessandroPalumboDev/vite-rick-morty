@@ -41,8 +41,11 @@ export default{
   </main>
   
 </template>
+
 <style scoped lang="scss">
 header{
-  margin-bottom: 25px;
+margin-bottom: 40px;
 }
+
+
 </style>

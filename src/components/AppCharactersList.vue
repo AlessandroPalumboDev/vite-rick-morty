@@ -47,37 +47,35 @@ export default {
         margin-bottom: 40px;
         position: relative;
 
-
         h5{
             font-weight: 800;
             margin: 10px auto;
         }
-
 
     }
 
     button{
             font-weight: 600;
             padding: 30px 14px;
-            border: 1px solid lightgray;
+            border: none;
             border-radius: 50%;
             margin-inline: 20px;
             background-color: rgb(0, 255, 64);
-            box-shadow:variables.$ombra-card;
+            box-shadow: variables.$ombra-sfera;
             color: black;
 
             &:hover{
-                background-color: rgb(0, 148, 37);
                 cursor: pointer;
                 color: white;
-                box-shadow: inset 0px 0px 28px -4px #FFFFFF,0px 0px 30px 4px #000000;
+                border: none;
+                box-shadow: inset 0px 0px 50px -10px #000000,0px 0px 10px 0px #000000;
             }
         }
 
     #prev, #next{
         position: absolute;
         top: calc(50% - 100px);
-        z-index: 0;
+        z-index: 1;
     }
 
     #next{
