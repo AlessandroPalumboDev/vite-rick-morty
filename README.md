@@ -1,5 +1,11 @@
+```bash
+  npm install
+  npm run dev
+```
+
 # Descrizione:
 
+## Prima parte
 - Create un nuovo progetto utilizzando Vite e Vue 3 e definite i componenti necessari per strutturare il layout come da screenshot allegato.
 - Al caricamento della pagina, effettuate una chiama ajax all'API di Rick & Morty:
 https://rickandmortyapi.com/api/character
@@ -9,11 +15,13 @@ https://rickandmortyapi.com/
 - NB: non occupatevi della parte di ricerca.
 - PS: Il font utilizzato è MontSerrat
 
-## Bonus:
+### Bonus:
 Creare un componente loader da visualizzare fintantoché i risultati non sono pronti.
 
+## Seconda parte
+- L'applicativo dovrà cercare i risultati per nome e per stato (alive, dead, unknown) al click sul bottone search.
+- Il tasto reset invece riporterà i campi alla loro situazione iniziale.
 
-```bash
-  npm install
-  npm run dev
-```
+### Bonus
+- Creare un componente utile per la paginazione dei risultati.
+

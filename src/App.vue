@@ -2,6 +2,8 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import Loader from './components/AppMainLoader.vue';
+import AppResearch from './components/AppResearch.vue';
+
 
 import axios from 'axios';
 import {store} from './store';
@@ -12,6 +14,7 @@ export default{
     AppHeader,
     AppMain,
     Loader,
+    AppResearch,
     // AppFooter
   },
 
@@ -23,29 +26,38 @@ export default{
 
   methods:{
     searchCharacter(){
-      store.loading = true;
+      // store.loading = true;
+      const params = {};
+      params.name = this.store.searchName
+      params.status = this.store.searchKey;
+      axios.get(store.apiUrl , {params}).then((response) => {
+      this.store.results = response.data.results;
+      // this.store.info = response.data.info;
+    })},
+
+    reset(){
+      
     }
+  
   },
 
   created() {
-    axios.get(store.apiUrl).then((response) => {
-      store.results = response.data.results;
-      store.info = response.data.info;
-      store.loading = false;
-    });
-    this.searchCharacter();
-  },
-};
+    this.searchCharacter()
+  }
+    
+  
+  }
 </script>
 <template>
 
   <header>
     <AppHeader />
+    <AppResearch @cerca="searchCharacter"/>
   </header>
 
   <main>
-    <Loader v-if="store.loading"/>
-    <AppMain v-else/>
+    <!-- <Loader v-if="store.loading"/> -->
+    <AppMain />
   </main>
   
 </template>

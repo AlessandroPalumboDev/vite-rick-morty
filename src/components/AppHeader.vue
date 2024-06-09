@@ -1,16 +1,11 @@
 <script>
-import AppResearch from './AppResearch.vue';
 export default {
     name: 'AppHeader',
 
-    components:{
-        AppResearch,
-    },
 };
 </script>
 <template>
     <h1>Rick and Morty App</h1>
-    <AppResearch />
 </template>
 
 <style scoped lang="scss">

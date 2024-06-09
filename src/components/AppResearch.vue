@@ -9,25 +9,25 @@ export default {
     },
 
     methods:{
-        search(){
-            console.log('ricerca in corso');
-        },
+        // search(){
+        //     console.log('ricerca in corso');
+        // },
     }
 }
 </script>
 
 <template>
     <div class="character-search">
-    <input type="text" placeholder="Search character">
+    <input type="text" placeholder="Search character" v-model="this.store.searchName">
 
-    <select name="Search" id="select" @change="search" v-model="store.searchKey">
-        <option value="0">Select status</option>
+    <select name="Search" id="select"  v-model="this.store.searchKey">
+        <option value="" disabled selected>Select status</option>
         <option value="alive">Alive</option>
         <option value="dead">Dead</option>
         <option value="unknow">Unknow</option>
     </select>
 
-    <button id="search">Search</button>
+    <button id="search" @click="$emit('cerca')">Search</button>
     <button id="reset">Reset</button>
 </div>
 </template>
