@@ -36,9 +36,12 @@ export default{
     })},
 
     reset(){
-      
+      this.store.searchKey = '';
+      this.store.searchName = '';
+      this.searchCharacter();
     }
   
+
   },
 
   created() {
@@ -52,7 +55,7 @@ export default{
 
   <header>
     <AppHeader />
-    <AppResearch @cerca="searchCharacter"/>
+    <AppResearch @cerca="searchCharacter" @reset="reset"/>
   </header>
 
   <main>

@@ -18,7 +18,7 @@ export default {
 
 <template>
     <div class="character-search">
-    <input type="text" placeholder="Search character" v-model="this.store.searchName">
+    <input type="text" placeholder="Search character" v-model="this.store.searchName" @keyup.enter="$emit('cerca')">
 
     <select name="Search" id="select"  v-model="this.store.searchKey">
         <option value="" disabled selected>Select status</option>
@@ -28,7 +28,7 @@ export default {
     </select>
 
     <button id="search" @click="$emit('cerca')">Search</button>
-    <button id="reset">Reset</button>
+    <button id="reset" @click="$emit('reset')">Reset</button>
 </div>
 </template>
 
